@@ -32,7 +32,7 @@ while True:
         salas[sala] = []
     salas[sala].append(client)
     print(f'{nome} se conectou na sala {sala}! INFO {addr}')
-    broadcast(sala, f'{nome} entrou na sala!')
+    broadcast(sala, f'{nome} entrou na sala!\n')
     thread = threading.Thread(target=enviarMensagem, args=(nome, sala, client))
     thread.start()
 
